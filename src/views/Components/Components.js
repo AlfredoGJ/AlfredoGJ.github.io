@@ -5,35 +5,33 @@ import classNames from "classnames";
 import { Link } from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
 
-import "./Components.css";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
+import Grid from '@material-ui/core/Grid'
 
-
-
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import MailIcon from '@material-ui/icons/Mail';
 // sections for this page
 import { LeftLinks, RightLinks } from "components/Header/HeaderLinks.js";
 import AspectCard  from "./aspect-card/aspect-card"
 import DescriptionCard from './description-card/description-card'
+import SkillLevel from './skill-level/skill-level'
 import styles from "assets/jss/material-kit-react/views/components.js";
-
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    <div>
+    <div id = "Home">
       <Header
         brand=""
-        rightLinks={<RightLinks />}
         leftLinks={<LeftLinks />}
         fixed
         color="transparent"
@@ -43,10 +41,10 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/landing-bg.jpg")}>
+      <Parallax  image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
-          <GridContainer>
-            <GridItem>
+          <Grid container>
+            <Grid>
               <div className={classes.brand}>
                 <h1 className={classes.title}>Hi, I'm Alfredo Granja.</h1>
                 <h3 className={classes.subtitle}>
@@ -54,49 +52,87 @@ export default function Components(props) {
                   new things. Physics enthusiast and maker in my spare time.
                 </h3>
               </div>
-            </GridItem>
-          </GridContainer>
+            </Grid>
+          </Grid>
         </div>
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <GridContainer spacing={1} className="container">
-          <GridItem>
-            <h1 className="text-center">About</h1>
-          </GridItem>
+        <Grid container spacing ={10} className = {classNames(classes.container, classes.gridContainerMaster)}  justify= 'cspaced-between' direction = 'column' alignItems = 'center' >
+           
+           {/* About Section  */}
+          <Grid container item spacing={8}  xs={12} id='About'>
+            <Grid item xs ={12}>
+              <h1  className={classes.textCenter}>About</h1>
+            </Grid>
 
-          <GridItem lg={3}>
-            <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
+            <Grid item lg={3}>
+              <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
 
-            </AspectCard>
-          </GridItem>
-          <GridItem lg={3}>
-            <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
+              </AspectCard>
+            </Grid>
+            <Grid item lg={3}>
+              <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
 
-            </AspectCard>
-          </GridItem>
-          <GridItem lg={3}>
-            <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
+              </AspectCard>
+            </Grid>
+            <Grid item lg={3}>
+              <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
 
-            </AspectCard>
-          </GridItem>
-          <GridItem lg={3}>
-            <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
+              </AspectCard>
+            </Grid>
+            <Grid item lg={3}>
+              <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
 
-            </AspectCard>
-          </GridItem>
+              </AspectCard>
+            </Grid>
 
-          
-          <GridItem lg={6}>
-            <DescriptionCard>
-            </DescriptionCard>
-          </GridItem>
+            
+            <Grid item lg={6}>
+              <DescriptionCard>
+              </DescriptionCard>
+            </Grid>
 
-          <GridItem lg={6}>
-            <DescriptionCard>
-            </DescriptionCard>
-          </GridItem>
-        </GridContainer>
+            <Grid item lg={6}>
+                <SkillLevel  skill= {'Kill people'} level ={25} color ={'turquoise'}/>
+                <SkillLevel  skill= {'Kill people'} level ={40} color ={'turquoise'}/>
+                <SkillLevel  skill= {'Kill people'} level ={79} color ={'turquoise'}/>
+            </Grid>
+          </Grid>
+
+          {/* Contact Section */}
+          <Grid container item spacing ={8} xs={12} id= 'Contact'>
+            <Grid item xs = {12}>
+              <h1  className={classes.textCenter}>Contact</h1>
+            </Grid>
+
+            <Grid container item xs= {12}  justify= "center">
+            <Grid item xs = {2} className ={classes.gridIconContainer}>
+                <MailIcon className = {classNames(classes.contactIcons, classes.githubIcon)}/>
+              </Grid>
+            </Grid>
+            <Grid container item spacing ={4} xs ={12}  justify= "center" direction = 'row' >
+              <Grid item xs = {2} className ={classes.gridIconContainer}>
+                <GitHubIcon className = {classNames(classes.contactIcons, classes.githubIcon)}/>
+              </Grid>
+              
+              <Grid item xs = {2} className ={classes.gridIconContainer}>
+                <LinkedInIcon className = {classNames(classes.contactIcons, classes.linkedinIcon)}/>
+              </Grid>
+              
+              <Grid item xs = {2} className ={classes.gridIconContainer}>
+              <TwitterIcon className = {classNames(classes.contactIcons, classes.tweeterIcon)}/>
+              </Grid>
+
+              <Grid item xs = {2} className ={classes.gridIconContainer}>
+              <FacebookIcon className = {classNames(classes.contactIcons, classes.facebookIcon)}/>
+              </Grid>
+            
+            </Grid>
+
+          </Grid>
+        </Grid>
+        
       </div>
       <Footer />
     </div>

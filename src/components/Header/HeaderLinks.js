@@ -93,8 +93,7 @@ export  function LeftLinks(props) {
       <ListItem className={classes.listItem}>
         
           <Button
-            href="https://twitter.com/CreativeTim?ref=creativetim"
-            target="_blank"
+            href="#Home"
             color="transparent"
             className={classes.navLink}
           >
@@ -104,15 +103,14 @@ export  function LeftLinks(props) {
       <ListItem className={classes.listItem}>    
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
-            target="_blank"
+            href="#About"
             className={classes.navLink}
           >
             About
           </Button>
       
       </ListItem>
-      <ListItem className={classes.listItem}> 
+      {/* <ListItem className={classes.listItem}> 
           <Button
             color="transparent"
             href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
@@ -131,12 +129,11 @@ export  function LeftLinks(props) {
           >
            Blog
           </Button>
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}> 
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-            target="_blank"
+            href="#Contact"
             className={classes.navLink}
           >
            Contanct

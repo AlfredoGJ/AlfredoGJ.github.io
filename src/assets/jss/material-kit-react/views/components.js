@@ -23,7 +23,7 @@ const componentsStyle = {
     zIndex: "3"
   },
   mainRaised: {
-    margin: "-60px 30px 0px",
+    margin: "30px 30px 50px",
     borderRadius: "6px",
     boxShadow:
       "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
@@ -33,7 +33,50 @@ const componentsStyle = {
   },
   textCenter: {
     textAlign: "center"
+  },
+  gridContainerMaster:{
+    padding:'2rem 0rem'
+  },
+  gridIconContainer:{
+    textAlign:'center'
+  },
+  contactIcons:{
+    fontSize:'3rem',
+    cursor:'pointer'
+  },
+  githubIcon:{
+    '&:hover':{
+      color: 'black',
+      
+    }
+  },
+    linkedinIcon:{
+      '&:hover':{
+        color: '#2867B2',
+        
+    }
+  },
+    facebookIcon:{
+      '&:hover':{
+        color: '#4267B2',
+        
+    }
+  },
+    tweeterIcon:{
+      '&:hover':{
+        color: '#1DA1F2',
+        
+    }
+  },
+    mailIcon:{
+      fontSize:'4rem',
+      '&:hover':{
+        color: '#1DA1F2',
+        
+    }
   }
+
+
 };
 
 export default componentsStyle;
