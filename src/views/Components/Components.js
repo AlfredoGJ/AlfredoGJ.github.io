@@ -1,8 +1,6 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-// react components for routing our app without refresh
-import { Link } from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -18,7 +16,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailIcon from '@material-ui/icons/Mail';
 // sections for this page
-import { LeftLinks, RightLinks } from "components/Header/HeaderLinks.js";
+import { LeftLinks } from "components/Header/HeaderLinks.js";
 import AspectCard  from "./aspect-card/aspect-card"
 import DescriptionCard from './description-card/description-card'
 import SkillLevel from './skill-level/skill-level'
