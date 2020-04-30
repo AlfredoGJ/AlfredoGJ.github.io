@@ -31,7 +31,6 @@ export default function Components(props) {
   return (
     <div id = "Home">
       <Header
-        brand=""
         leftLinks={<LeftLinks />}
         fixed
         color="transparent"
@@ -41,15 +40,14 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax  image={require("assets/img/landing-bg.jpg")}>
+      <Parallax  image={require("assets/img/laptop0.jpg")}>
         <div className={classes.container}>
-          <Grid container>
+          <Grid container className ={classes.textCenter}>
             <Grid>
               <div className={classes.brand}>
-                <h1 className={classes.title}>Hi, I'm Alfredo Granja.</h1>
+                <h1 className={classes.titlebig}>Hi, I'm Alfredo Granja.</h1>
                 <h3 className={classes.subtitle}>
-                  Web developer. Creative, self-taught and passionate to learn
-                  new things. Physics enthusiast and maker in my spare time.
+                 Software Developer
                 </h3>
               </div>
             </Grid>
@@ -67,22 +65,22 @@ export default function Components(props) {
             </Grid>
 
             <Grid item lg={3}>
-              <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
+              <AspectCard title="Creative" description ="I like to find new ways of thinking, creating and combining that lead to fresh new things." iconName="color_lens">
 
               </AspectCard>
             </Grid>
             <Grid item lg={3}>
-              <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
+              <AspectCard title="Analytic" description ="I like to know things deeply. Analyze how things, and particularly software and software frameworks work." iconName="youtube_searched_for">
 
               </AspectCard>
             </Grid>
             <Grid item lg={3}>
-              <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
+              <AspectCard title="Fast Learner" description ="I like to be learning constantly, and i do it fast. I can switch to a new framework or technology very quick." iconName="flash_on">
 
               </AspectCard>
             </Grid>
             <Grid item lg={3}>
-              <AspectCard title="Titulo" description ="es una descripcion" iconName="alarm">
+              <AspectCard title="Problem Solver" description ="I enjoy applying my skills to solve problems, finding efficient and creative solutions." iconName="check_circle">
 
               </AspectCard>
             </Grid>
@@ -94,9 +92,14 @@ export default function Components(props) {
             </Grid>
 
             <Grid item lg={6}>
-                <SkillLevel  skill= {'Kill people'} level ={25} color ={'turquoise'}/>
-                <SkillLevel  skill= {'Kill people'} level ={40} color ={'turquoise'}/>
-                <SkillLevel  skill= {'Kill people'} level ={79} color ={'turquoise'}/>
+                <SkillLevel  skill= {'CSS'} level ={75} color ={'darkturquoise'}/>
+                <SkillLevel  skill= {'HTML'} level ={75} color ={'darkturquoise'}/>
+                <SkillLevel  skill= {'javascript'} level ={85} color ={'darkturquoise'}/>
+                <SkillLevel  skill= {'React.js'} level ={80} color ={'darkturquoise'}/>
+                <SkillLevel  skill= {'node'} level ={70} color ={'darkturquoise'}/>
+                <SkillLevel  skill= {'Python'} level ={70} color ={'darkturquoise'}/>
+                <SkillLevel  skill= {'C#'} level ={85} color ={'darkturquoise'}/>
+
             </Grid>
           </Grid>
 
@@ -107,25 +110,39 @@ export default function Components(props) {
             </Grid>
 
             <Grid container item xs= {12}  justify= "center">
-            <Grid item xs = {2} className ={classes.gridIconContainer}>
-                <MailIcon className = {classNames(classes.contactIcons, classes.githubIcon)}/>
+            <Grid item xs = {3} className ={classes.gridIconContainer}>
+
+              <a href ='mailto:alfredo_granja@outlook.com' className ={classes.link}>
+              <MailIcon className = {classNames(classes.contactIcons, classes.mailIcon)}/>
+                alfredo_granja@outlook.com
+              </a>
+               
               </Grid>
             </Grid>
             <Grid container item spacing ={4} xs ={12}  justify= "center" direction = 'row' >
               <Grid item xs = {2} className ={classes.gridIconContainer}>
-                <GitHubIcon className = {classNames(classes.contactIcons, classes.githubIcon)}/>
+                <a className = {classNames(classes.githubIcon, classes.iconLink)} href = 'https://github.com/AlfredoGJ' target='_blank'>
+                <GitHubIcon className = {classes.contactIcons}/>
+                </a>
+               
               </Grid>
               
               <Grid item xs = {2} className ={classes.gridIconContainer}>
-                <LinkedInIcon className = {classNames(classes.contactIcons, classes.linkedinIcon)}/>
+              <a className = {classNames(classes.linkedinIcon,classes.iconLink)} href = 'https://www.linkedin.com/in/alfredo-granja/' target='_blank'>
+                <LinkedInIcon className = {classes.contactIcons}/>
+                </a>
               </Grid>
               
               <Grid item xs = {2} className ={classes.gridIconContainer}>
-              <TwitterIcon className = {classNames(classes.contactIcons, classes.tweeterIcon)}/>
+              <a className = {classNames(classes.tweeterIcon, classes.iconLink)} href = 'https://twitter.com/_Fre2_' target='_blank'>
+                <TwitterIcon className = {classes.contactIcons}/>
+              </a>
               </Grid>
 
               <Grid item xs = {2} className ={classes.gridIconContainer}>
-              <FacebookIcon className = {classNames(classes.contactIcons, classes.facebookIcon)}/>
+              <a className = {classNames(classes.facebookIcon, classes.iconLink)} href = 'https://www.facebook.com/profile.php?id=100012815117000' target='_blank'>
+              <FacebookIcon className = {classes.contactIcons}/>
+              </a>
               </Grid>
             
             </Grid>

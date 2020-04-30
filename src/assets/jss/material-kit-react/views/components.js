@@ -6,16 +6,19 @@ const componentsStyle = {
     color: "#FFFFFF",
     textAlign: "left"
   },
-  title: {
+  titlebig: {
     fontSize: "4.2rem",
     fontWeight: "600",
     display: "inline-block",
-    position: "relative"
+    position: "relative", 
+    color: 'white'
   },
   subtitle: {
-    fontSize: "1.313rem",
+    fontSize: "2.0rem",
     maxWidth: "500px",
-    margin: "10px 0 0"
+    margin: "10px 0 0",
+    color:'darkturquoise',
+    fontWeight:'400'
   },
   main: {
     background: "#FFFFFF",
@@ -29,7 +32,23 @@ const componentsStyle = {
       "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
   },
   link: {
-    textDecoration: "none"
+    textDecoration: "none",
+    color: '#3c4858',
+    '&:hover':{
+      color:'#0072c6'
+    },
+    '&:focus':{
+      color:'#3c4858'
+    }
+  },
+  iconLink:{
+    color:'#3c4858',
+    textDecoration:'none',
+    '&:focus':
+    {
+      color:'#3c4858'
+    }
+    
   },
   textCenter: {
     textAlign: "center"
@@ -42,13 +61,13 @@ const componentsStyle = {
   },
   contactIcons:{
     fontSize:'3rem',
-    cursor:'pointer'
   },
   githubIcon:{
     '&:hover':{
       color: 'black',
-      
     }
+   
+
   },
     linkedinIcon:{
       '&:hover':{
@@ -69,14 +88,12 @@ const componentsStyle = {
     }
   },
     mailIcon:{
-      fontSize:'4rem',
-      '&:hover':{
-        color: '#1DA1F2',
-        
+      fontSize:'4.5rem',
+    },
+    myp:{
+      fontSize:'12pt',
+      fontWeight:'400'
     }
-  }
-
-
 };
 
 export default componentsStyle;
